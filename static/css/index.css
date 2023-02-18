@@ -1,0 +1,10 @@
+
+.container-inner{
+    background-color: yellow;
+    min-height: 100vh;
+}
+
+.title{
+    text-align: center;
+    margin-top: 180px;
+}

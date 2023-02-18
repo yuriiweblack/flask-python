@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+}
+
+.title{
+    margin: 0;
+}
+
+.title:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.content{
+   /* background-color: yellow; */
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container{
+    background-image: url('/static/images/mountain.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.product-img{
+    display: none;
+}
+
+.button{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 20px;
+    background-color: yellow;
+    border-radius: 5px;
+    position: absolute;
+    left: 800px;
+    top: 400px;
+}
+
+.child{
+    background-color: yellow;
+}
