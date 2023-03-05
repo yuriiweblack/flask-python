@@ -3,12 +3,12 @@
 {% block body %}
 
   <form action="/register" method="post">
-    <input name="name" autocomplete="off" placeholder="Name" type="text">
+    <input class="input-style" name="name" autocomplete="off" required placeholder="Name" type="text">
     <select name="sport">
       <option disabled selected>Sport</option>
-      <option value="Basketball">Basketball</option>
-      <option value="Football">Football</option>
-      <option value="Сhess">Сhess</option>
+      {% for sport in sports %}
+        <option value="{{sport}}">{{sport}}</option>
+      {% endfor %}
     </select>
     <button type="submit">Register</button>
   </form>

@@ -4,16 +4,27 @@ app = Flask(__name__)
 
 REGISTRANTS = {}
 
+SPORTS = [
+    "Basketball",
+    "Football",
+    "Сhess",
+    "Tennis"
+]
+
 @app.route('/')
 def index():
-    return render_template("index.html")
+    return render_template("index.html", sports=SPORTS )
 
 
 @app.route("/register", methods=["POST"])
 def register():
     # global REGISTRANTS
     name = request.form['name']
+    if not name:
+        return render_template("failure.html")
     sport = request.form['sport']
+    if sport not in SPORTS:
+        return render_template("failure.html")
     REGISTRANTS[name] = sport
 
     # print(name, sport)
